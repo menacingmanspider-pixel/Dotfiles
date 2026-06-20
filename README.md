@@ -5,3 +5,4 @@ waybar
 hyprlock
 hyprshot
 thunar
+aww
