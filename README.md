@@ -4,3 +4,4 @@ kitty
 waybar
 hyprlock
 hyprshot
+thunar
