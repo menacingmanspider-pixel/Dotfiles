@@ -1,0 +1,66 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "margin-top": 12,
+    "margin-left": 16,
+    "margin-right": 16,
+    "spacing": 20,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/prev", "mpris", "custom/next"],
+    "modules-right": ["pulseaudio", "cpu", "temperature", "clock", "custom/power"],
+
+    "hyprland/workspaces": {
+
+    },
+
+    "mpris": {
+        "format": "󰎆  {artist} - {title}",
+        "format-paused": "󰎊  {artist} - {title}",
+        "max-length": 40,
+        "ellipsis": "...",
+        "tooltip": true,
+        "tooltip-format": "{player}\n{artist} — {album}\n{title}"
+    },
+
+    "custom/prev": {
+        "format": "󰒮",
+        "on-click": "playerctl previous",
+        "tooltip": false
+    },
+
+    "custom/next": {
+        "format": "󰒭",
+        "on-click": "playerctl next",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "󰕾  {volume}%",
+        "format-muted": "󰝟  Muted",
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "cpu": {
+        "format": "    {usage}%"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C"
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}"
+    },
+    
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "hyprlock",
+        "on-click-right": "systemctl poweroff",
+        "tooltip-format": "Left: Lock\nRight: Shutdown",
+        "tooltip": true
+    }
+}
