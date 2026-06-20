@@ -7,7 +7,6 @@ local menu = "wofi"
 hl.config({
     cursor = {
         no_hardware_cursors = true,
-        -- Set to 0 so the cursor never vanishes when resting
         inactive_timeout = 0
     },
 
@@ -22,6 +21,7 @@ hl.config({
     },
 })
 
+-- dont forget to change so your display doesn't get cooked
 hl.monitor({
   output = "DP-3",
   mode = "2560x1440@165.00Hz",
@@ -53,13 +53,14 @@ hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 
--- Scroll through existing workspaces with mainMod + scroll
+-- Scroll through workspaces with mainMod + scroll
 hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
+-- Switch workspaces
 for i = 1, 10 do
-    local key = i % 10 -- 10 maps to key 0
+    local key = i % 10
     hl.bind(mainMod .. " + " .. tostring(key),             hl.dsp.focus({ workspace = i}))
     hl.bind(mainMod .. " + SHIFT + " .. tostring(key),     hl.dsp.window.move({ workspace = i }))
 end
