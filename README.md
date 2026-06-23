@@ -6,3 +6,5 @@ hyprlock
 hyprshot
 thunar
 aww
+
+download jetbrains mono font
