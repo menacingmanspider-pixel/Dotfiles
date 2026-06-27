@@ -4,6 +4,8 @@ local terminal = "kitty"
 local fileManager = "thunar"
 local menu = "wofi"
 
+require("scripts.vinegar-spotify")
+
 hl.config({
     cursor = {
         no_hardware_cursors = true,
