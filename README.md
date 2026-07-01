@@ -20,7 +20,7 @@ jetbrains mono font
 - Bars:
     * waybar
 - Window manager:
-   * hyprland
+      * hyprland
 
 ## Images
 This is a somewhat outdated image of what it looks like
