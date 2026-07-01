@@ -1,4 +1,4 @@
-Need to download:
+##Need to download
 wofi
 kitty
 waybar
@@ -8,6 +8,17 @@ thunar
 aww
 jetbrains mono font
 
+##Overview
+- Window manager:
+* hyprland
+- File manager:
+* thunar
+- Login Manager:
+* ly
+- Terminal:
+* kitty
+- Bars:
+* waybar
 
 Window manager: hyprland
 
